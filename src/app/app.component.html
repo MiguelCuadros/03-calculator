@@ -5,44 +5,39 @@
 
     <!-- Pantalla -->
     <div class="mb-4">
-      <input
-        type="text"
-        class="w-full bg-gray-800 text-white text-3xl text-right p-4 rounded-lg shadow-inner focus:outline-none"
-        readonly
-        placeholder="0"
-        [value]="pantalla">
+      <app-display [value]="pantalla" />
     </div>
 
     <!-- Botones -->
-    <div class="grid grid-cols-4 gap-4">
+    <div class="grid grid-cols-4 grid-rows-5 gap-4">
       <!-- Fila 1 -->
-      <button (click)="agregar('C')" class="col-span-1 bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition">C</button>
-      <button (click)="agregar('%')" class="col-span-1 bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">%</button>
-      <button (click)="agregar('+/-')" class="col-span-1 bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">+/-</button>
-      <button (click)="agregar('/')" class="col-span-1 bg-blue-500 text-white font-bold py-3 rounded-lg hover:bg-blue-600 transition">/</button>
+      <app-button class="bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition" label="C" (buttonClick)="agregar('C')" />
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="%" (buttonClick)="agregar('%')" />
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="+/-" (buttonClick)="agregar('+/-')" />
+      <app-button class="col-span-1 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition" label="/" (buttonClick)="agregar('/')" />
 
       <!-- Fila 2 -->
-      <button (click)="agregar('7')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">7</button>
-      <button (click)="agregar('8')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">8</button>
-      <button (click)="agregar('9')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">9</button>
-      <button (click)="agregar('x')" class="bg-blue-500 text-white font-bold py-3 rounded-lg hover:bg-blue-600 transition">X</button>
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="7" (buttonClick)="agregar('7')" />
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="8" (buttonClick)="agregar('8')" />
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="9" (buttonClick)="agregar('9')" />
+      <app-button class="col-span-1 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition" label="X" (buttonClick)="agregar('x')" />
 
       <!-- Fila 3 -->
-      <button (click)="agregar('4')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">4</button>
-      <button (click)="agregar('5')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">5</button>
-      <button (click)="agregar('6')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">6</button>
-      <button (click)="agregar('-')" class="bg-blue-500 text-white font-bold py-3 rounded-lg hover:bg-blue-600 transition">-</button>
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="4" (buttonClick)="agregar('4')" />
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="5" (buttonClick)="agregar('5')" />
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="6" (buttonClick)="agregar('6')" />
+      <app-button class="col-span-1 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition" label="-" (buttonClick)="agregar('-')" />
 
       <!-- Fila 4 -->
-      <button (click)="agregar('1')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">1</button>
-      <button (click)="agregar('2')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">2</button>
-      <button (click)="agregar('3')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">3</button>
-      <button (click)="agregar('+')" class="bg-blue-500 text-white font-bold py-3 rounded-lg hover:bg-blue-600 transition">+</button>
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="1" (buttonClick)="agregar('1')" />
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="2" (buttonClick)="agregar('2')" />
+      <app-button class="col-span-1 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="3" (buttonClick)="agregar('3')" />
+      <app-button class="col-span-1 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition" label="+" (buttonClick)="agregar('+')" />
 
       <!-- Fila 5 -->
-      <button (click)="agregar('0')" class="col-span-2 bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">0</button>
-      <button (click)="agregar('.')" class="bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition">.</button>
-      <button (click)="agregar('=')" class="bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition">=</button>
+      <app-button class="col-span-2 bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition" label="0" (buttonClick)="agregar('0')" />
+      <app-button class="bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition" label="." (buttonClick)="agregar('.')" />
+      <app-button class="bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition" label="=" (buttonClick)="agregar('=')" />
     </div>
   </div>
 </div>

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { ButtonComponent } from './components/ui/button/button.component';
+import { DisplayComponent } from './components/ui/display/display.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [ButtonComponent, DisplayComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
